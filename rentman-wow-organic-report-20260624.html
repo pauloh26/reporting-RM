@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rentman WoW Organic Report — Jun 18–24, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141413;--bg-alt:#1c1c1a;--ink:#ededea;--muted:#7a7a72;--accent:#ff6a2b;--positive:#4ec88a;--negative:#f06b5c;--neutral:#b0b0a8;--border:#2e2e2b;--card:#1c1c1a;--sans:'DM Sans',sans-serif;--mono:'DM Mono',monospace;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);}
+.slide{min-height:100vh;display:flex;flex-direction:column;padding:56px 64px;border-bottom:1px solid var(--border);position:relative;background:var(--bg);}
+.slide-number{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.08em;position:absolute;bottom:32px;right:64px;}
+.slide-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:48px;}
+.section-h{font-size:28px;font-weight:300;margin-bottom:8px;}
+.section-sub{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:40px;}
+/* cover */
+.slide-cover{justify-content:space-between;background:#0d0d0c;}
+.cover-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;}
+.cover-title{font-size:52px;font-weight:300;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px;}
+.cover-title strong{font-weight:500;display:block;}
+.cover-period{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:28px;padding-top:28px;border-top:1px solid #2a2a27;}
+.cover-stats{display:flex;gap:64px;margin-top:64px;}
+.cover-stat-value{font-size:36px;font-weight:300;letter-spacing:-.02em;line-height:1;}
+.cover-stat-value .delta{font-size:18px;font-family:var(--mono);margin-left:8px;}
+.cover-stat-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+.pos{color:var(--positive);}.neg{color:var(--negative);}.neu{color:var(--neutral);}.acc{color:var(--accent);}
+/* defs */
+.defs-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 80px;max-width:900px;}
+.def-term{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.def-desc{font-size:14px;color:var(--ink);line-height:1.6;}
+.def-desc code{background:var(--bg-alt);padding:1px 5px;border-radius:3px;font-size:12px;color:var(--neutral);}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead tr{border-bottom:2px solid var(--ink);}
+thead th{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 12px 12px 0;text-align:right;font-weight:400;white-space:nowrap;}
+thead th:first-child{text-align:left;}
+thead th.group-header{color:var(--ink);font-size:10px;padding-bottom:4px;}
+.col-group{border-left:1px solid var(--border);padding-left:12px !important;}
+tbody tr{border-bottom:1px solid var(--border);}
+tbody tr:last-child{border-bottom:2px solid var(--ink);font-weight:500;}
+tbody td{padding:10px 12px 10px 0;text-align:right;font-family:var(--mono);font-size:12px;color:var(--ink);}
+tbody td:first-child{text-align:left;font-family:var(--sans);font-size:13px;color:var(--ink);}
+.flag{color:var(--accent);font-family:var(--mono);font-size:10px;}
+.table-footnote{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:20px;line-height:1.6;}
+/* commentary */
+.commentary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);max-width:960px;}
+.commentary-card{background:var(--card);padding:28px 32px;}
+.commentary-card-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.commentary-arrow{font-size:18px;line-height:1;}
+.commentary-region{font-weight:500;font-size:14px;}
+.commentary-delta{font-family:var(--mono);font-size:11px;margin-left:auto;}
+.commentary-body{font-size:13px;color:var(--neutral);line-height:1.65;}
+.card-up .commentary-arrow,.card-up .commentary-delta{color:var(--positive);}
+.card-down .commentary-arrow,.card-down .commentary-delta{color:var(--negative);}
+.card-watch .commentary-arrow,.card-watch .commentary-delta{color:var(--accent);}
+/* movers */
+.movers-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:960px;}
+.movers-col h3{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+.movers-col ul{list-style:none;}
+.movers-col li{display:flex;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:12px;}
+.mv-page{font-family:var(--mono);color:var(--ink);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.mv-delta{font-family:var(--mono);font-weight:500;}
+.mv-abs{font-family:var(--mono);font-size:10px;color:var(--muted);min-width:78px;text-align:right;}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="slide slide-cover">
+  <div class="slide-label">Rentman · Weekly Report (WoW)</div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Organic Traffic &amp; Conversion</div>
+    <div class="cover-title">Week-over-Week<br><strong>Organic Performance</strong></div>
+    <div class="cover-period">Jun 18 – Jun 24, 2026 &nbsp;vs&nbsp; Jun 11 – Jun 17, 2026</div>
+    <div class="cover-stats">
+      <div><div class="cover-stat-value">2,172 <span class="delta neg">−6.5%</span></div><div class="cover-stat-label">Organic Engaged Sessions</div></div>
+      <div><div class="cover-stat-value">160 <span class="delta neg">−19.2%</span></div><div class="cover-stat-label">Conversions</div></div>
+      <div><div class="cover-stat-value">7.37%</div><div class="cover-stat-label">Blended Conv. Rate (was 8.52%)</div></div>
+    </div>
+  </div>
+  <div class="slide-number">1 / 6</div>
+</section>
+
+<!-- 2 DEFINITIONS -->
+<section class="slide">
+  <div class="slide-label">Definitions &amp; Data Sources</div>
+  <div class="defs-grid">
+    <div class="def-block"><div class="def-term">Traffic</div><div class="def-desc">Organic engaged sessions from GA4, exported by country (<code>download.csv</code>) and by page (<code>download__1_.csv</code>). Paid traffic excluded.</div></div>
+    <div class="def-block"><div class="def-term">Conversion</div><div class="def-desc">The engaged-sessions value from the GA4 "Organic conversions" exports (<code>download__2_.csv</code> / <code>download__3_.csv</code>), treated as conversions per the report owner's instruction. <strong>Not</strong> BigQuery trials.</div></div>
+    <div class="def-block"><div class="def-term">Conv. Rate</div><div class="def-desc">Conversions ÷ Traffic, computed from period totals (not an average of per-row rates). Shown to two decimals.</div></div>
+    <div class="def-block"><div class="def-term">Focus Region</div><div class="def-desc">Countries mapped to Rentman's canonical regions. Mexico → <code>Other</code>; Luxembourg → <code>DACH+L</code>; Nordics incl. Iceland → <code>Scandinavia</code>.</div></div>
+    <div class="def-block"><div class="def-term">Locale Homepage</div><div class="def-desc">Root path per locale: <code>/</code> (EN), <code>/nl</code>, <code>/de</code>, <code>/fr</code>, <code>/es</code>, <code>/it</code>.</div></div>
+    <div class="def-block"><div class="def-term">WoW</div><div class="def-desc">Current week vs the immediately preceding week. No year-over-year basis in this report.</div></div>
+  </div>
+  <div class="slide-number">2 / 6</div>
+</section>
+
+<!-- 3 REGION TABLE -->
+<section class="slide slide-table">
+  <div class="slide-label">Table 1 — Traffic &amp; Conversion by Focus Region</div>
+  <div class="section-h">Focus region performance</div>
+  <div class="section-sub">Sorted by current-week traffic · ⁿ = conversions n&lt;15 (noise-prone)</div>
+  <table>
+    <thead>
+      <tr><th></th>
+        <th colspan="3" class="group-header" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Traffic</th>
+        <th colspan="3" class="group-header col-group" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Conversions</th>
+        <th colspan="3" class="group-header col-group" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Conv. Rate</th>
+      </tr>
+      <tr><th>Focus region</th>
+        <th>This wk</th><th>Prior</th><th>WoW</th>
+        <th class="col-group">This wk</th><th>Prior</th><th>WoW</th>
+        <th class="col-group">This wk</th><th>Prior</th><th>WoW</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>North America</td>
+        <td>611</td><td>564</td><td class="pos">+8.3%</td>
+        <td class="col-group">33</td><td>37</td><td class="neg">−10.8%</td>
+        <td class="col-group">5.40%</td><td>6.56%</td><td class="neg">−17.7%</td>
+      </tr>
+      <tr>
+        <td>Other</td>
+        <td>602</td><td>640</td><td class="neg">−5.9%</td>
+        <td class="col-group">87</td><td>94</td><td class="neg">−7.4%</td>
+        <td class="col-group">14.45%</td><td>14.69%</td><td class="neg">−1.6%</td>
+      </tr>
+      <tr>
+        <td>Netherlands + Belgium <span class="flag">ⁿ</span></td>
+        <td>334</td><td>370</td><td class="neg">−9.7%</td>
+        <td class="col-group">9</td><td>15</td><td class="neg">−40.0%</td>
+        <td class="col-group">2.69%</td><td>4.05%</td><td class="neg">−33.5%</td>
+      </tr>
+      <tr>
+        <td>DACH+L <span class="flag">ⁿ</span></td>
+        <td>152</td><td>173</td><td class="neg">−12.1%</td>
+        <td class="col-group">5</td><td>9</td><td class="neg">−44.4%</td>
+        <td class="col-group">3.29%</td><td>5.20%</td><td class="neg">−36.8%</td>
+      </tr>
+      <tr>
+        <td>France <span class="flag">ⁿ</span></td>
+        <td>110</td><td>122</td><td class="neg">−9.8%</td>
+        <td class="col-group">5</td><td>5</td><td class="neu">+0.0%</td>
+        <td class="col-group">4.55%</td><td>4.10%</td><td class="pos">+10.9%</td>
+      </tr>
+      <tr>
+        <td>Iberia <span class="flag">ⁿ</span></td>
+        <td>86</td><td>112</td><td class="neg">−23.2%</td>
+        <td class="col-group">7</td><td>13</td><td class="neg">−46.2%</td>
+        <td class="col-group">8.14%</td><td>11.61%</td><td class="neg">−29.9%</td>
+      </tr>
+      <tr>
+        <td>Scandinavia <span class="flag">ⁿ</span></td>
+        <td>76</td><td>104</td><td class="neg">−26.9%</td>
+        <td class="col-group">6</td><td>11</td><td class="neg">−45.5%</td>
+        <td class="col-group">7.89%</td><td>10.58%</td><td class="neg">−25.4%</td>
+      </tr>
+      <tr>
+        <td>UK + Ireland <span class="flag">ⁿ</span></td>
+        <td>75</td><td>71</td><td class="pos">+5.6%</td>
+        <td class="col-group">4</td><td>4</td><td class="neu">+0.0%</td>
+        <td class="col-group">5.33%</td><td>5.63%</td><td class="neg">−5.3%</td>
+      </tr>
+      <tr>
+        <td>Italy <span class="flag">ⁿ</span></td>
+        <td>70</td><td>116</td><td class="neg">−39.7%</td>
+        <td class="col-group">2</td><td>7</td><td class="neg">−71.4%</td>
+        <td class="col-group">2.86%</td><td>6.03%</td><td class="neg">−52.7%</td>
+      </tr>
+      <tr>
+        <td>Oceania <span class="flag">ⁿ</span></td>
+        <td>56</td><td>51</td><td class="pos">+9.8%</td>
+        <td class="col-group">2</td><td>3</td><td class="neg">−33.3%</td>
+        <td class="col-group">3.57%</td><td>5.88%</td><td class="neg">−39.3%</td>
+      </tr>
+      <tr>
+        <td><strong>Total</strong></td>
+        <td><strong>2,172</strong></td><td><strong>2,323</strong></td><td class="neg"><strong>−6.5%</strong></td>
+        <td class="col-group"><strong>160</strong></td><td><strong>198</strong></td><td class="neg"><strong>−19.2%</strong></td>
+        <td class="col-group"><strong>7.37%</strong></td><td><strong>8.52%</strong></td><td class="neg"><strong>−13.6%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-footnote">¹ Summed countries (2,172) vs GA grand total (2,169): +0.1% — GA4 rolls a small unlisted long-tail into its total; gap is within normal tolerance.<br>² Conversion = GA "Organic conversions" engaged-sessions column, per report-owner instruction; not BigQuery trials.</div>
+  <div class="slide-number">3 / 6</div>
+</section>
+
+<!-- 4 LOCALE TABLE -->
+<section class="slide slide-table">
+  <div class="slide-label">Table 2 — Traffic &amp; Conversion by Locale Homepage</div>
+  <div class="section-h">Locale homepage performance</div>
+  <div class="section-sub">Root path of each locale · ⁿ = conversions n&lt;15 (noise-prone)</div>
+  <table>
+    <thead>
+      <tr><th></th>
+        <th colspan="3" class="group-header" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Traffic</th>
+        <th colspan="3" class="group-header col-group" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Conversions</th>
+        <th colspan="3" class="group-header col-group" style="text-align:center;border-bottom:1px solid var(--border);padding-bottom:6px;">Conv. Rate</th>
+      </tr>
+      <tr><th>Locale homepage</th>
+        <th>This wk</th><th>Prior</th><th>WoW</th>
+        <th class="col-group">This wk</th><th>Prior</th><th>WoW</th>
+        <th class="col-group">This wk</th><th>Prior</th><th>WoW</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English (/)</td>
+        <td>815</td><td>835</td><td class="neg">−2.4%</td>
+        <td class="col-group">82</td><td>108</td><td class="neg">−24.1%</td>
+        <td class="col-group">10.06%</td><td>12.93%</td><td class="neg">−22.2%</td>
+      </tr>
+      <tr>
+        <td>Dutch (/nl) <span class="flag">ⁿ</span></td>
+        <td>140</td><td>137</td><td class="pos">+2.2%</td>
+        <td class="col-group">1</td><td>8</td><td class="neg">−87.5%</td>
+        <td class="col-group">0.71%</td><td>5.84%</td><td class="neg">−87.8%</td>
+      </tr>
+      <tr>
+        <td>German (/de) <span class="flag">ⁿ</span></td>
+        <td>72</td><td>80</td><td class="neg">−10.0%</td>
+        <td class="col-group">2</td><td>4</td><td class="neg">−50.0%</td>
+        <td class="col-group">2.78%</td><td>5.00%</td><td class="neg">−44.4%</td>
+      </tr>
+      <tr>
+        <td>French (/fr) <span class="flag">ⁿ</span></td>
+        <td>118</td><td>144</td><td class="neg">−18.1%</td>
+        <td class="col-group">7</td><td>6</td><td class="pos">+16.7%</td>
+        <td class="col-group">5.93%</td><td>4.17%</td><td class="pos">+42.4%</td>
+      </tr>
+      <tr>
+        <td>Spanish (/es) <span class="flag">ⁿ</span></td>
+        <td>126</td><td>126</td><td class="neu">+0.0%</td>
+        <td class="col-group">12</td><td>6</td><td class="pos">+100.0%</td>
+        <td class="col-group">9.52%</td><td>4.76%</td><td class="pos">+100.0%</td>
+      </tr>
+      <tr>
+        <td>Italian (/it) <span class="flag">ⁿ</span></td>
+        <td>47</td><td>84</td><td class="neg">−44.0%</td>
+        <td class="col-group">0</td><td>4</td><td class="neg">−100.0%</td>
+        <td class="col-group">0.00%</td><td>4.76%</td><td class="neg">−100.0%</td>
+      </tr>
+      <tr>
+        <td><strong>Total (6 homepages)</strong></td>
+        <td><strong>1,318</strong></td><td><strong>1,406</strong></td><td class="neg"><strong>−6.3%</strong></td>
+        <td class="col-group"><strong>104</strong></td><td><strong>136</strong></td><td class="neg"><strong>−23.5%</strong></td>
+        <td class="col-group"><strong>7.89%</strong></td><td><strong>9.67%</strong></td><td class="neg"><strong>−18.4%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-footnote">³ Homepage conversion counts are very small (0–12/week); treat all WoW % here as directional only. The total row is more reliable than any single locale.</div>
+  <div class="slide-number">4 / 6</div>
+</section>
+
+<!-- 5 MOVERS -->
+<section class="slide">
+  <div class="slide-label">Page-Level Movers — Organic Traffic</div>
+  <div class="section-h">Where the traffic shifted</div>
+  <div class="section-sub">Largest absolute WoW change in engaged sessions · pages with ≥30 combined sessions</div>
+  <div class="movers-wrap">
+    <div class="movers-col"><h3>↑ Gainers</h3><ul><li><span class="mv-page">/blog/video-film-production-planning-free-template</span><span class="mv-delta pos">+6</span><span class="mv-abs">19 ← 13</span></li><li><span class="mv-page">/blog/serial-numbers-for-equipment</span><span class="mv-delta pos">+5</span><span class="mv-abs">19 ← 14</span></li><li><span class="mv-page">/nl</span><span class="mv-delta pos">+3</span><span class="mv-abs">140 ← 137</span></li><li><span class="mv-page">/contact</span><span class="mv-delta pos">+1</span><span class="mv-abs">32 ← 31</span></li><li><span class="mv-page">/blog/rental-business-ideas</span><span class="mv-delta pos">+1</span><span class="mv-abs">22 ← 21</span></li></ul></div>
+    <div class="movers-col"><h3>↓ Decliners</h3><ul><li><span class="mv-page">/pricing</span><span class="mv-delta neg">−39</span><span class="mv-abs">156 ← 195</span></li><li><span class="mv-page">/it</span><span class="mv-delta neg">−37</span><span class="mv-abs">47 ← 84</span></li><li><span class="mv-page">/fr</span><span class="mv-delta neg">−26</span><span class="mv-abs">118 ← 144</span></li><li><span class="mv-page">/product-updates/introducing-the-rentman-mcp</span><span class="mv-delta neg">−25</span><span class="mv-abs">17 ← 42</span></li><li><span class="mv-page">/</span><span class="mv-delta neg">−20</span><span class="mv-abs">815 ← 835</span></li><li><span class="mv-page">/?r=0</span><span class="mv-delta neg">−19</span><span class="mv-abs">55 ← 74</span></li></ul></div>
+  </div>
+  <div class="table-footnote" style="margin-top:32px;">Read as <span class="mv-abs" style="color:var(--muted)">this wk ← prior wk</span>. <code style="color:var(--neutral)">/?r=0</code> is a query-string variant of the homepage.</div>
+  <div class="slide-number">5 / 6</div>
+</section>
+
+<!-- 6 COMMENTARY -->
+<section class="slide">
+  <div class="slide-label">What the Numbers Say</div>
+  <div class="commentary-grid">
+
+    <div class="commentary-card card-down">
+      <div class="commentary-card-header"><span class="commentary-arrow">↓</span><span class="commentary-region">Broad-based softening</span><span class="commentary-delta">Traffic −6.5% · Conv −19.2%</span></div>
+      <div class="commentary-body">Both traffic and conversions fell this week, with conversions dropping roughly 3× faster than traffic. Blended conversion rate slipped from 8.52% to 7.37%. Nearly every region declined, so this looks like a week-level dip rather than one region dragging the total.</div>
+    </div>
+
+    <div class="commentary-card card-up">
+      <div class="commentary-card-header"><span class="commentary-arrow">↑</span><span class="commentary-region">North America</span><span class="commentary-delta">Traffic +8.3%</span></div>
+      <div class="commentary-body">The only large region to grow traffic (564→611), driven by the US (+10.2%). Conversions still eased slightly (37→33), so the conv. rate softened — more visitors, marginally fewer converting. Worth watching whether next week confirms the traffic gain.</div>
+    </div>
+
+    <div class="commentary-card card-watch">
+      <div class="commentary-card-header"><span class="commentary-arrow">→</span><span class="commentary-region">"Other" carries conversion</span><span class="commentary-delta">87 of 160 conv</span></div>
+      <div class="commentary-body">The Other catch-all is the single biggest conversion bucket (~54% of all conversions) at a 14.45% rate — far above any focus region. This concentration is a blind spot: we can't see which countries inside Other drive it. A country-level drill-down on Other would be the highest-value follow-up.</div>
+    </div>
+
+    <div class="commentary-card card-down">
+      <div class="commentary-card-header"><span class="commentary-arrow">↓</span><span class="commentary-region">Italy</span><span class="commentary-delta">Traffic −39.7%</span></div>
+      <div class="commentary-body">Italy fell hardest on traffic (116→70) and the <code>/it</code> homepage halved (84→47). Conversions dropped 7→2. Small base means noise, but the size of the traffic drop is notable — worth a quick check for a ranking loss or a one-off spike in the prior week.</div>
+    </div>
+
+    <div class="commentary-card card-up">
+      <div class="commentary-card-header"><span class="commentary-arrow">↑</span><span class="commentary-region">Spanish homepage</span><span class="commentary-delta">Conv +100%</span></div>
+      <div class="commentary-body">Flat traffic on <code>/es</code> (126→126) but conversions doubled (6→12) — the standout converter among locale homepages this week. Base is small so treat as a hypothesis, but if it holds it's a positive signal for the Iberia homepage.</div>
+    </div>
+
+    <div class="commentary-card card-down">
+      <div class="commentary-card-header"><span class="commentary-arrow">↓</span><span class="commentary-region">/pricing</span><span class="commentary-delta">−39 sessions</span></div>
+      <div class="commentary-body">The biggest single-page traffic loss (195→156, −20%). Pricing is a high-intent page, so a sustained decline here could pressure conversions downstream. Check whether this is seasonal or a search-visibility change.</div>
+    </div>
+
+  </div>
+  <div class="slide-number">6 / 6</div>
+</section>
+
+</body>
+</html>
